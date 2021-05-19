@@ -8,7 +8,7 @@ export const Slide = ({ headline, body, ctaText, ctaLink, mediaType, src, curren
     <div className="slide-block">
       <div className="slide-block-background">
         {mediaType === 'image' ? <img alt="" src={src} className={index === current ? 'slide-block-background-img  slide-block-background-img__active' : 'slide-block-background-img'} /> :
-          <video ref={videoRef} width="100%" autoplay="" loop={true} poster="data:image/gif,AAAA">
+          <video ref={videoRef} width="100%" autoplay="" loop={true} poster="data:image/gif,AAAA" className={index === current ? 'slide-block-background-img  slide-block-background-img__active' : 'slide-block-background-img'}>
             <source src={src} type="video/mp4">
             </source>
           </video>}
