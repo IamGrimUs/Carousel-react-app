@@ -11,17 +11,17 @@ export const Carousel = () => {
 
   const videoRef = createRef();
 
-  // useEffect(() => {
-  //   if (slidesData[current]['mediaType'] === 'image') {
-  //     var timer = setTimeout(() => {
-  //       setCurrent(current === slideLimit - 1 ? 0 : current + 1)
-  //     }, displayDuration)
-  //   }
-  //   return () => {
-  //     clearTimeout(timer)
-  //   }
+  useEffect(() => {
+    if (slidesData[current]['mediaType'] === 'image') {
+      var timer = setTimeout(() => {
+        setCurrent(current === slideLimit - 1 ? 0 : current + 1)
+      }, displayDuration)
+    }
+    return () => {
+      clearTimeout(timer)
+    }
 
-  // }, [current])
+  }, [current])
 
   const onPlaybackClick = () => {
     if(!videoPlayback){
