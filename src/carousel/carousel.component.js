@@ -50,7 +50,12 @@ export const Carousel = () => {
     return slidesData.map((slide, index) => {
       const { headline, body, ctaText, ctaLink, mediaType, src } = slide
       return (
-        index === current && (<Slide headline={headline} body={body} ctaText={ctaText} ctaLink={ctaLink} mediaType={mediaType} src={src} current={current} index={index} onClick={onPlaybackClick} videoRef={videoRef} />)
+        <div
+          className={index === current ? 'slide-block active' : 'slide-block'}
+          key={index}
+        >
+          {index === current && (<Slide headline={headline} body={body} ctaText={ctaText} ctaLink={ctaLink} mediaType={mediaType} src={src} onClick={onPlaybackClick} videoRef={videoRef} />)}
+        </div>
       )
     })
   }

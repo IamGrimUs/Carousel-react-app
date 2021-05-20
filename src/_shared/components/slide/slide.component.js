@@ -2,13 +2,13 @@ import React from 'react'
 import './slide.styles.css'
 
 
-export const Slide = ({ headline, body, ctaText, ctaLink, mediaType, src, current, index, videoRef }) => {
+export const Slide = ({ headline, body, ctaText, ctaLink, mediaType, src, videoRef }) => {
 
   return (
-    <div className="slide-block">
+    <>
       <div className="slide-block-background">
-        {mediaType === 'image' ? <img alt="" src={src} className={index === current ? 'slide-block-background-img  slide-block-background-img__active' : 'slide-block-background-img'} /> :
-          <video ref={videoRef} width="100%" autoplay="" loop={true} poster="data:image/gif,AAAA" className={index === current ? 'slide-block-background-img  slide-block-background-img__active' : 'slide-block-background-img'}>
+        {mediaType === 'image' ? <img alt="" src={src} className="slide-block-background-img" /> :
+          <video ref={videoRef} width="100%" autoplay="" loop={true} poster="data:image/gif,AAAA" className="slide-block-background-img">
             <source src={src} type="video/mp4">
             </source>
           </video>}
@@ -23,7 +23,7 @@ export const Slide = ({ headline, body, ctaText, ctaLink, mediaType, src, curren
           </button>
         </a>
       </div>
-    </div>
+    </>
   )
 
 }

@@ -1,12 +1,19 @@
 .slide-block {
-  width: 100%;
-  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  overflow: hidden;
+  opacity: 0;
+  transition-duration: 1s ease;
 }
-
+.slide-block.active {
+  opacity: 1;
+  transition-duration: 1s;
+}
 .slide-block-background {
   position: absolute;
   top: 0;
@@ -21,12 +28,6 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  opacity: 0;
-  transition: all 3s ease;
-}
-.slide-block-background-img__active {
-  opacity: 1;
-  transition: opacity 1s;
 }
 .slide-block-overlay {
   position: absolute;
@@ -85,11 +86,10 @@
   .slide-block {
     justify-content: flex-start;
     align-items: center;
-    margin-left: 100px;
   }
   .slide-block-text {
     text-align: left;
-    margin-bottom: 150px;
+    margin: 0 0 150px 100px;
 }
   .slide-block-text-cta {
     margin: 1.5rem 0 0;
