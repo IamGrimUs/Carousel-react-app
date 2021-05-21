@@ -1,8 +1,5 @@
 # Deployed Project on Netlify
-https://clever-roentgen-a5f0c5.netlify.app/
-
-# Todo List:
-- Add CSS tranistions between slides.
+<https://clever-roentgen-a5f0c5.netlify.app/>
 
 # Getting Started with Create React App
 
